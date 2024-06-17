@@ -29,4 +29,4 @@ COPY --chown=django-user:django-user . /app
 WORKDIR /app
 
 # Define the command to start Celery
-CMD celery -A celery_project.celery worker --loglevel=info
+CMD celery -A celery_project.celery flower --loglevel=info
