@@ -5,7 +5,7 @@ from .tasks import *
 
 def handl_user_data(request):
     task = send_sms_to_user.apply_async()
-
+    task.get()
     return HttpResponse("sync view")
 
 def handl_user_data2(request):
